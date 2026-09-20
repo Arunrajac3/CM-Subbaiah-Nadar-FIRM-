@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="C.M. Subbaiah Nadar Firm — Nattu Marunthukadai, Madurai. Wholesale Siddha & Ayurvedic mooligai, herbs, roots, powders and oils."/>
+<title>C.M. Subbaiah Nadar Firm | Nattu Marunthukadai | Madurai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&family=Noto+Sans+Tamil:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --green-dark:#1a2e1a;
+  --green:#243d24;
+  --green-mid:#2d4a2d;
+  --cream:#f7f4ee;
+  --cream-dark:#efeae0;
+  --text:#1c241c;
+  --muted:#5c6b5c;
+  --gold:#c4a035;
+  --gold-btn:#c9a227;
+  --white:#fff;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--text);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(920px,92%);margin-inline:auto}
+
+/* Header */
+.header{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--green-dark);color:#fff;height:64px;display:flex;align-items:center}
+.header-inner{width:min(1100px,94%);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;flex-direction:column;line-height:1.2}
+.brand strong{font-size:1.05rem;font-weight:600;letter-spacing:.2px}
+.brand small{font-size:.7rem;color:rgba(255,220,150,.85);font-family:'Noto Sans Tamil',sans-serif;margin-top:2px}
+.header-actions{display:flex;align-items:center;gap:10px}
+.wa-btn{background:var(--gold-btn);color:var(--green-dark);font-weight:600;font-size:.9rem;padding:10px 18px;border-radius:999px;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.wa-btn:hover{filter:brightness(1.05)}
+.menu-btn{background:transparent;border:none;color:#fff;font-size:1.5rem;cursor:pointer;padding:6px;line-height:1}
+
+/* Mobile nav */
+.mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:var(--green-dark);padding:16px;flex-direction:column;gap:4px;z-index:99;border-top:1px solid rgba(255,255,255,.1)}
+.mobile-nav.open{display:flex}
+.mobile-nav a{color:rgba(255,255,255,.9);padding:12px 14px;border-radius:8px;font-size:.95rem}
+.mobile-nav a:hover{background:rgba(255,255,255,.08)}
+
+/* Hero */
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;padding:100px 0 48px;color:#fff;background:var(--green-dark)}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,30,15,.55) 0%,rgba(15,30,15,.75) 50%,rgba(15,30,15,.92) 100%),url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><rect fill="%231a2e1a" width="800" height="600"/></svg>');background-size:cover;background-position:center;z-index:0}
+.hero-content{position:relative;z-index:1;width:min(920px,92%);margin:0 auto}
+.hero-tag{font-size:.75rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,220,150,.9);margin-bottom:14px;font-weight:500}
+.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2rem,6vw,3.1rem);font-weight:600;line-height:1.15;margin-bottom:16px;max-width:18ch}
+.hero p{font-size:1.05rem;opacity:.9;max-width:36ch;margin-bottom:28px;line-height:1.65}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn-gold{background:var(--gold-btn);color:var(--green-dark);font-weight:600;padding:14px 24px;border-radius:999px;font-size:.95rem;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.btn-outline-light{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45);padding:13px 22px;border-radius:999px;font-size:.95rem;font-weight:500}
+.btn-outline-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+
+/* Sections */
+.section{padding:56px 0}
+.section-label{font-size:.72rem;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px}
+.section h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.7rem,4vw,2.35rem);font-weight:600;color:var(--green-dark);line-height:1.2;margin-bottom:14px}
+.section .lead{color:var(--muted);font-size:1.02rem;max-width:48ch;line-height:1.7}
+
+/* Trade strip */
+.trade-strip{background:var(--cream);padding:28px 0 8px}
+.trade-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.trade-item{display:flex;gap:12px;align-items:flex-start}
+.trade-item .icon{font-size:1.3rem;margin-top:2px;opacity:.8}
+.trade-item strong{display:block;font-size:.78rem;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:2px}
+.trade-item span{font-size:.95rem;color:var(--text)}
+
+/* About / The Firm */
+.firm{background:var(--cream)}
+.firm p{color:var(--muted);font-size:1.05rem;line-height:1.75;margin-bottom:14px;max-width:54ch}
+
+/* Lines we keep */
+.lines{background:var(--cream-dark);padding:56px 0}
+.lines h2{margin-bottom:8px}
+.lines .lead{margin-bottom:28px}
+.lines-img{border-radius:16px;overflow:hidden;margin-bottom:28px;aspect-ratio:16/9;background:#d4cfc4;display:flex;align-items:center;justify-content:center}
+.lines-img img{width:100%;height:100%;object-fit:cover}
+.cat-grid{display:grid;gap:14px}
+.cat-card{background:var(--white);border-radius:14px;padding:20px 22px;border:1px solid rgba(0,0,0,.04)}
+.cat-card .leaf{color:var(--green-mid);font-size:1.1rem;margin-bottom:6px}
+.cat-card h3{font-size:1.08rem;font-weight:600;color:var(--green-dark);margin-bottom:6px}
+.cat-card p{font-size:.92rem;color:var(--muted);line-height:1.55}
+
+/* How we trade */
+.how{background:var(--green-dark);color:#fff;padding:56px 0}
+.how .section-label{color:rgba(255,220,150,.9)}
+.how h2{color:#fff;margin-bottom:28px}
+.how-grid{display:grid;gap:14px}
+.how-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:22px}
+.how-card .ic{font-size:1.25rem;margin-bottom:10px;opacity:.9}
+.how-card h3{font-size:1.1rem;font-weight:600;margin-bottom:8px}
+.how-card p{font-size:.92rem;opacity:.85;line-height:1.55}
+
+/* Visit */
+.visit{background:var(--cream);padding:56px 0}
+.visit-img{border-radius:16px;overflow:hidden;margin-bottom:28px;aspect-ratio:16/10;background:#c8c0b0}
+.visit-img img{width:100%;height:100%;object-fit:cover}
+.visit h2{margin-bottom:8px}
+.visit .addr{color:var(--muted);font-size:1.02rem;margin-bottom:20px;line-height:1.6}
+.visit-meta{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.visit-meta div{display:flex;align-items:center;gap:10px;font-size:.95rem;color:var(--text)}
+.visit-meta .ic{opacity:.7}
+.map-wrap{border-radius:14px;overflow:hidden;height:280px;border:1px solid rgba(0,0,0,.06);background:#e8e4dc;margin-bottom:16px}
+.map-wrap iframe{width:100%;height:100%;border:0}
+.map-btn{display:inline-flex;align-items:center;justify-content:center;width:100%;background:var(--gold-btn);color:var(--green-dark);font-weight:600;padding:14px;border-radius:10px;font-size:.95rem}
+
+/* Meta list (proprietor etc) */
+.meta-list{background:var(--cream);padding:32px 0 8px}
+.meta-row{padding:16px 0;border-bottom:1px solid rgba(0,0,0,.06)}
+.meta-row:last-child{border-bottom:none}
+.meta-row label{display:block;font-size:.72rem;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:4px}
+.meta-row span{font-size:1.05rem;color:var(--text);font-weight:500}
+
+/* Enquiry */
+.enquire{background:var(--cream-dark);padding:56px 0}
+.enquire h2{margin-bottom:10px}
+.enquire .lead{margin-bottom:12px}
+.enquire .phone{font-size:1.15rem;font-weight:600;color:var(--green-dark);margin-bottom:24px;display:inline-flex;align-items:center;gap:8px}
+.form-card{background:var(--white);border-radius:16px;padding:28px 24px;border:1px solid rgba(0,0,0,.05)}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.88rem;font-weight:500;margin-bottom:6px;color:var(--text)}
+.form-group input,.form-group select,.form-group textarea{
+  width:100%;padding:12px 14px;border:1px solid #e0dbd0;border-radius:10px;
+  font-size:.95rem;font-family:inherit;background:#faf8f4;color:var(--text)
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  outline:none;border-color:var(--green-mid);background:#fff
+}
+.btn-send{width:100%;background:var(--green-dark);color:#fff;font-weight:600;padding:14px;border:none;border-radius:10px;font-size:1rem;cursor:pointer;margin-top:8px}
+.btn-send:hover{background:var(--green)}
+
+/* Footer */
+.footer{background:var(--green-dark);color:rgba(255,255,255,.8);padding:40px 0 28px;text-align:center}
+.footer h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;color:#fff;font-weight:600;margin-bottom:6px}
+.footer .sub{font-size:.9rem;opacity:.75;margin-bottom:16px}
+.footer .disc{font-size:.82rem;opacity:.65;max-width:42ch;margin:0 auto 20px;line-height:1.55}
+.footer .copy{font-size:.78rem;opacity:.5}
+
+/* Admin toggle (tiny) */
+.admin-link{position:fixed;bottom:12px;right:12px;font-size:.7rem;opacity:.35;color:var(--muted);z-index:50}
+
+@media(max-width:640px){
+  .hero{min-height:78vh;padding:90px 0 40px}
+  .hero h1{font-size:1.85rem}
+  .section{padding:44px 0}
+  .form-card{padding:22px 18px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <strong>C.M. Subbaiah Nadar Firm</strong>
+      <small>நட்டு மருந்து கடை · MADURAI</small>
+    </a>
+    <div class="header-actions">
+      <a class="wa-btn" href="https://wa.me/916381078532?text=Vanakkam%2C%20wholesale%20enquiry%20from%20website" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#firm">The Firm</a>
+  <a href="#lines">Lines we keep</a>
+  <a href="#how">How we trade</a>
+  <a href="#visit">Visit</a>
+  <a href="#enquire">Enquire</a>
+  <a href="https://wa.me/916381078532" target="_blank">WhatsApp</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Est. Family Firm · East Masi Street</div>
+    <h1>Wholesale siddha &amp; ayurvedic mooligai, from a Madurai nattu marunthukadai.</h1>
+    <p>Manicka Nadar — Siddha Ayurvedic mooligai merchant. Bulk herbs, roots, powders and oils for pharmacies, practitioners and trade buyers.</p>
+    <div class="hero-btns">
+      <a href="#enquire" class="btn-gold">Send a wholesale enquiry →</a>
+      <a href="#visit" class="btn-outline-light">Visit the shop</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRADE STRIP -->
+<section class="trade-strip">
+  <div class="container">
+    <div class="trade-grid">
+      <div class="trade-item">
+        <span class="icon">🏪</span>
+        <div><strong>Trade</strong><span>Wholesale drugstore</span></div>
+      </div>
+      <div class="trade-item">
+        <span class="icon">🕐</span>
+        <div><strong>Hours</strong><span>Monday – Saturday, from 10:00 AM</span></div>
+      </div>
+      <div class="trade-item">
+        <span class="icon">📍</span>
+        <div><strong>Address</strong><span>East Masi Street, Madurai</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE FIRM -->
+<section class="section firm" id="firm">
+  <div class="container">
+    <div class="section-label">The Firm</div>
+    <h2>C.M. Subbaiah Nadar Firm</h2>
+    <p style="font-family:'Noto Sans Tamil',sans-serif;color:var(--green-mid);font-size:1.1rem;margin-bottom:16px">நட்டு மருந்து கடை</p>
+    <p>A nattu marunthukadai on Swamy Sannathy Lane, off East Masi Street — the old temple-town trade corridor of Madurai. We supply siddha and ayurvedic mooligai to wholesale buyers who need consistent lots, not packaged retail kits.</p>
+    <p>Trade is conducted under the family name of Manicka Nadar, siddha ayurvedic mooligai merchant. Enquiries are taken in person, by phone, and on WhatsApp.</p>
+  </div>
+</section>
+
+<!-- META -->
+<section class="meta-list">
+  <div class="container">
+    <div class="meta-row"><label>Proprietor</label><span>Manicka Nadar</span></div>
+    <div class="meta-row"><label>Category</label><span>Siddha · Ayurvedic · Mooligai</span></div>
+    <div class="meta-row"><label>Plus Code</label><span>W49F+PC Madurai</span></div>
+    <div class="meta-row"><label>Sunday</label><span>Sunday closed</span></div>
+  </div>
+</section>
+
+<!-- LINES WE KEEP -->
+<section class="section lines" id="lines">
+  <div class="container">
+    <div class="section-label">Lines we keep</div>
+    <h2>Herbs, roots, powders and oils.</h2>
+    <p class="lead">Inventory changes with season. Treat this as a guide, then enquire for what is actually in the store this week.</p>
+    <div class="lines-img">
+      <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=900&q=80" alt="Herbs and spices in sacks" loading="lazy" onerror="this.style.display='none'"/>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <div class="leaf">🍃</div>
+        <h3>Dried herbs &amp; leaves</h3>
+        <p>Seasonal mooligai, leaves and flowers sourced for siddha and ayurvedic compounding.</p>
+      </div>
+      <div class="cat-card">
+        <div class="leaf">🪵</div>
+        <h3>Roots, barks &amp; resins</h3>
+        <p>Wholesale lots of roots, inner barks, gums and resins — graded for trade, not retail sachets.</p>
+      </div>
+      <div class="cat-card">
+        <div class="leaf">🥣</div>
+        <h3>Churnams &amp; powders</h3>
+        <p>Traditional powders for practitioners, pharmacies and bulk buyers who know their grades.</p>
+      </div>
+      <div class="cat-card">
+        <div class="leaf">🫙</div>
+        <h3>Medicated oils</h3>
+        <p>Siddha and ayurvedic tailams for wholesale supply. Confirm stock before placing a large order.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE TRADE -->
+<section class="how" id="how">
+  <div class="container">
+    <div class="section-label">How we trade</div>
+    <h2>Built for pharmacies, compounders and bulk buyers.</h2>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="ic">⚖️</div>
+        <h3>Wholesale lots</h3>
+        <p>Ask for available grades and lot sizes. We do not run a shopping cart — stock moves by enquiry.</p>
+      </div>
+      <div class="how-card">
+        <div class="ic">📦</div>
+        <h3>Mooligai you can inspect</h3>
+        <p>Visit the godown-style counter on East Masi Street. Confirm moisture, cut and origin before you book.</p>
+      </div>
+      <div class="how-card">
+        <div class="ic">🚚</div>
+        <h3>Dispatch after confirmation</h3>
+        <p>Once quantity and rate are agreed, packing and dispatch are arranged. Rates vary with season and grade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="section visit" id="visit">
+  <div class="container">
+    <div class="section-label">Visit</div>
+    <h2>30, Swamy Sannathy Lane</h2>
+    <p class="addr">30, Swamy Sannathy Lane, East Masi Street<br>Madurai, Tamil Nadu 625001</p>
+    <div class="visit-meta">
+      <div><span class="ic">🕐</span> Monday – Saturday, from 10:00 AM. Sunday closed.</div>
+      <div><span class="ic">📞</span> <a href="tel:+916381078532">063810 78532</a></div>
+      <div><span class="ic">📍</span> Plus code W49F+PC Madurai</div>
+    </div>
+    <div class="map-wrap">
+      <iframe
+        title="C.M. Subbaiah Nadar Firm location"
+        src="https://www.google.com/maps?q=C.M.Subbhaiah+Nadar+firm+nattu+marunthukadai+30+swamy+sannathy+lane+E+Masi+St+Madurai+625001&amp;z=17&amp;output=embed"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <a class="map-btn" href="https://maps.app.goo.gl/snfoHmsd6qzy7wd1A" target="_blank" rel="noopener">Open in Google Maps</a>
+  </div>
+</section>
+
+<!-- ENQUIRE -->
+<section class="section enquire" id="enquire">
+  <div class="container">
+    <div class="section-label">Enquire</div>
+    <h2>Ask for a lot, not a catalogue checkout.</h2>
+    <p class="lead">Tell us the line, approximate quantity and your city. We reply with availability and rate. No online payment on this site.</p>
+    <a class="phone" href="tel:+916381078532">📞 063810 78532</a>
+    <div class="form-card">
+      <form id="waForm">
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input type="text" id="name" required placeholder="Full name / Shop name"/>
+        </div>
+        <div class="form-group">
+          <label for="mobile">Mobile</label>
+          <input type="tel" id="mobile" required placeholder="10-digit number" pattern="[0-9]{10}"/>
+        </div>
+        <div class="form-group">
+          <label for="line">Product line</label>
+          <select id="line" required>
+            <option value="">Select</option>
+            <option>Dried herbs &amp; leaves</option>
+            <option>Roots, barks &amp; resins</option>
+            <option>Churnams &amp; powders</option>
+            <option>Medicated oils</option>
+            <option>Other / Mixed lot</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="qty">Quantity (approx.)</label>
+          <input type="text" id="qty" placeholder="e.g. 10 kg / 2 tins"/>
+        </div>
+        <div class="form-group">
+          <label for="notes">Notes</label>
+          <textarea id="notes" rows="2" placeholder="Grade, city, pickup or dispatch"></textarea>
+        </div>
+        <button type="submit" class="btn-send">Send on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <h3>C.M. Subbaiah Nadar Firm</h3>
+    <p class="sub">Manicka Nadar · Siddha · Ayurvedic · Mooligai Merchant</p>
+    <p class="disc">Traditional herbal trade only. Not a substitute for a registered medical practitioner. Confirm identity, grade and permitted use before compounding.</p>
+    <p class="copy">© 2026 C.M. Subbaiah Nadar Firm. Madurai.</p>
+  </div>
+</footer>
+
+<a href="#admin" class="admin-link" id="adminLink">Admin</a>
+
+<script>
+document.getElementById('menuBtn').addEventListener('click',()=>{
+  document.getElementById('mobileNav').classList.toggle('open');
+});
+document.querySelectorAll('#mobileNav a').forEach(a=>{
+  a.addEventListener('click',()=>document.getElementById('mobileNav').classList.remove('open'));
+});
+
+document.getElementById('waForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const mobile=document.getElementById('mobile').value.trim();
+  const line=document.getElementById('line').value;
+  const qty=document.getElementById('qty').value.trim();
+  const notes=document.getElementById('notes').value.trim();
+  let msg='Vanakkam, wholesale enquiry from website:%0A%0A';
+  msg+='Name: '+encodeURIComponent(name)+'%0A';
+  msg+='Mobile: '+encodeURIComponent(mobile)+'%0A';
+  msg+='Line: '+encodeURIComponent(line)+'%0A';
+  if(qty) msg+='Qty: '+encodeURIComponent(qty)+'%0A';
+  if(notes) msg+='Notes: '+encodeURIComponent(notes)+'%0A';
+  window.open('https://wa.me/916381078532?text='+msg,'_blank');
+});
+</script>
+</body>
+</html>
